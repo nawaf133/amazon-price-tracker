@@ -75,8 +75,11 @@ To run real tracking 24/7, deploy the same repo on a VPS or a Raspberry Pi and r
 
 ## ⚠️ Notes
 
-Scraping Amazon pages may go against their Terms of Service and Amazon can show a captcha or change its HTML at any time. Keep the interval reasonable (3h+) and use this for personal purposes. For production use, prefer the official Amazon Product Advertising API.
+craping Amazon pages may go against their Terms of Service and Amazon 
+can show a captcha or change its HTML at any time. Keep the interval reasonable (3h+) 
+and use this for personal purposes. For production use, prefer the official Amazon PA-API.
 
+* Note: Some parts of this code were developed and modified with AI assistance.
 ## 📄 License
 
 MIT
