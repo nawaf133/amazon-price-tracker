@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-import db  # noqa: E402  (after load_dotenv so DB_PATH is picked up)
+import db 
 
 DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK_URL", "").strip()
 TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
@@ -111,7 +111,7 @@ def notify(name, url, price, target, prev):
     for fn in (send_discord, send_telegram):
         try:
             fn(name, url, price, target, prev)
-        except Exception as e:  # one channel failing must not block the other
+        except Exception as e: 
             print(f"  ! {fn.__name__} failed: {e}")
 
 
@@ -136,7 +136,7 @@ def check_all(products):
             print(f"[blocked] {url}: {e}. Try again later / less often.")
         except Exception as e:
             print(f"[error] {url}: {e}")
-        time.sleep(random.uniform(4, 9))  # be polite
+        time.sleep(random.uniform(4, 9))  
 
 
 def load_products(path="products.json"):
