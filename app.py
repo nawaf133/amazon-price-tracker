@@ -9,7 +9,7 @@ from flask import Flask, jsonify, render_template_string
 
 load_dotenv()
 
-import db  # noqa: E402
+import db  
 
 app = Flask(__name__)
 DEMO_MODE = os.getenv("DEMO_MODE", "0") == "1"
